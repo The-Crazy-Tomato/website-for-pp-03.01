@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Витрина продуктов - CyberX</title>
+<link rel="stylesheet" href="Showcase.css">
+</head>
+<body>
+
+    <div class="hat"> <!-- Шапка -->
+        <header>
+            <div class="logo">
+                <img src="image/CyberX.png" alt="CyberX Logo">
+            </div>
+            <nav id="navigation">
+                <ul>
+                    <li><a href="warp.html">Каталог игр</a></li>
+                    <li><a href="reservation.html">Бронирование</a></li>
+                    <li><a href="#" class="active">Витрина</a></li>
+                    <li><a href="account.html">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <!-- Заголовок витрины -->
+        <div class="showcase-header">
+            <h1>🍽️ Фуд & Напитки</h1>
+            <p>Подкрепитесь во время игровой сессии!</p>
+        </div>
+
+        <!-- Категории -->
+        <div class="categories">
+            <button class="category-btn active" data-category="all">Все товары</button>
+            <button class="category-btn" data-category="new">Новинки</button>
+            <button class="category-btn" data-category="frozen">Замороженная еда</button>
+            <button class="category-btn" data-category="drinks">Напитки</button>
+            <button class="category-btn" data-category="ready">Готовая еда</button>
+        </div>
+
+        <!-- Товары -->
+        <div class="items-section">
+            <h2 class="section-title">🔥 Новинки и акции</h2>
+            <div class="items-grid">
+                <!-- Пепси -->
+                <div class="item-card" data-category="new drinks">
+                    <div class="item-badge">Новинка</div>
+                    <div class="item-image">
+                        <img src="image/Pepsi.png" alt="Pepsi">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Pepsi 0.5л</h3>
+                        <div class="item-price">80 P</div>
+                        <button class="btn-add" data-name="Pepsi 0.5л" data-price="80">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Энергетик -->
+                <div class="item-card" data-category="new drinks">
+                    <div class="item-badge">Хит</div>
+                    <div class="item-image">
+                        <img src="image/Red Bull.png" alt="Энергетик">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Red Bull 0.25л</h3>
+                        <div class="item-price">150 P</div>
+                        <button class="btn-add" data-name="Red Bull 0.25л" data-price="150">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Monster -->
+                <div class="item-card" data-category="new drinks">
+                    <div class="item-badge">Популярно</div>
+                    <div class="item-image">
+                        <img src="image/Monster Energy.png" alt="Monster">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Monster Energy 0.5л</h3>
+                        <div class="item-price">180 P</div>
+                        <button class="btn-add" data-name="Monster Energy 0.5л" data-price="180">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Замороженная еда -->
+            <h2 class="section-title">❄️ Замороженная еда</h2>
+            <div class="items-grid">
+                <!-- Бургер -->
+                <div class="item-card" data-category="frozen">
+                    <div class="item-image">
+                        <img src="image/Замороженный бургер.png" alt="Бургер">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Замороженный бургер</h3>
+                        <div class="item-price">100 P</div>
+                        <button class="btn-add" data-name="Замороженный бургер" data-price="100">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Наггетсы -->
+                <div class="item-card" data-category="frozen">
+                    <div class="item-image">
+                        <img src="image/наггетсы.png" alt="Наггетсы">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Куриные наггетсы</h3>
+                        <div class="item-price">120 P</div>
+                        <button class="btn-add" data-name="Куриные наггетсы" data-price="120">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Картошка фри -->
+                <div class="item-card" data-category="frozen">
+                    <div class="item-image">
+                        <img src="image/Картофель фри.png" alt="Картошка фри чипсы">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Картофель фри чипсы</h3>
+                        <div class="item-price">90 P</div>
+                        <button class="btn-add" data-name="Картофель фри" data-price="90">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Напитки -->
+            <h2 class="section-title">🥤 Напитки</h2>
+            <div class="items-grid">
+                <!-- Сок -->
+                <div class="item-card" data-category="drinks">
+                    <div class="item-image">
+                        <img src="image/Апельсиновый сок.png" alt="Сок">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Апельсиновый сок 1л</h3>
+                        <div class="item-price">100 P</div>
+                        <button class="btn-add" data-name="Апельсиновый сок 1л" data-price="100">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Вода -->
+                <div class="item-card" data-category="drinks">
+                    <div class="item-image">
+                        <img src="image/Вода.png" alt="Вода">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Вода 0.5л</h3>
+                        <div class="item-price">60 P</div>
+                        <button class="btn-add" data-name="Вода 0.5л" data-price="60">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Coca-Cola -->
+                <div class="item-card" data-category="drinks">
+                    <div class="item-image">
+                        <img src="image/Coca-Cola.png" alt="Coca-Cola">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Coca-Cola 0.5л</h3>
+                        <div class="item-price">80 P</div>
+                        <button class="btn-add" data-name="Coca-Cola 0.5л" data-price="80">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Готовая еда -->
+            <h2 class="section-title">🍱 Готовая еда</h2>
+            <div class="items-grid">
+                <!-- Онигири -->
+                <div class="item-card" data-category="ready">
+                    <div class="item-badge">Бестселлер</div>
+                    <div class="item-image">
+                        <img src="image/Онигири с лососем.png" alt="Онигири">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Онигири с лососем</h3>
+                        <div class="item-price">120 P</div>
+                        <button class="btn-add" data-name="Онигири с лососем" data-price="120">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Бутерброд -->
+                <div class="item-card" data-category="ready">
+                    <div class="item-image">
+                        <img src="image/Бутерброд с ветчиной.png" alt="Бутерброд">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Бутерброд с ветчиной</h3>
+                        <div class="item-price">90 P</div>
+                        <button class="btn-add" data-name="Бутерброд с ветчиной" data-price="90">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Ципсы -->
+                <div class="item-card" data-category="ready">
+                    <div class="item-image">
+                        <img src="image/ципсы.png" alt="Салат">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-name">Чипсы</h3>
+                        <div class="item-price">150 P</div>
+                        <button class="btn-add" data-name="Чипсы" data-price="150">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Корзина -->
+        <div class="cart-section">
+            <div class="cart-header">
+                <h2 class="cart-title">🛒 Ваш заказ</h2>
+                <div class="cart-total" id="cartTotal">0 P</div>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <div class="cart-empty">
+                    <div>🛍️</div>
+                    <p>Корзина пуста. Добавьте товары из витрины!</p>
+                </div>
+            </div>
+            
+            <div class="cart-actions">
+                <button class="btn-clear" id="clearCart">Очистить корзину</button>
+                <button class="btn-checkout" id="checkoutBtn" disabled>Заказать доставку</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="image/CyberX.png" alt="CyberX Logo">
+                    <div style="font-size: 20px; font-weight: bold; color: #9f9fd7;">CyberX Cafe</div>
+                </div>
+                <p style="color: #aaa; margin-bottom: 15px;">
+                    Закуски и напитки прямо во время игры.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">VK</a>
+                    <a href="#" class="social-icon">TG</a>
+                    <a href="#" class="social-icon">📞</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Категории</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Новинки</a></li>
+                    <li><a href="#">Замороженная еда</a></li>
+                    <li><a href="#">Напитки</a></li>
+                    <li><a href="#">Готовая еда</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Доставка</h3>
+                <div class="contact-info">
+                    <div class="phone-number">
+                        Внутренний: 333
+                    </div>
+                    <div style="color: #aaa; margin-top: 10px;">
+                        Доставка за 5 минут
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2024 CyberX Cafe. Все цены указаны в рублях.
+        </div>
+    </footer>
+
+    <script src="Showcase.js"></script>
+</body>
+</html>

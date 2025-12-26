@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #0f0e47; 
+    color: white;
+    min-height: 100vh;
+}
+
+/* Шапка */
+.hat {
+    background-color: #12122b;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 60px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+#navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+}
+
+#navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+#navigation a:hover {
+    color: #9f9fd7;
+    background: rgba(159, 159, 215, 0.1);
+}
+
+#navigation a.active {
+    color: #9f9fd7;
+    background: rgba(159, 159, 215, 0.2);
+    font-weight: bold;
+}
+
+/* Основа */
+.banner {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); 
+}
+
+/* Карточки скидок */
+.discount-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.discount-card {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    min-width: 280px;
+    border: 1px solid rgba(159, 159, 215, 0.3);
+}
+
+.discount-card:hover {
+    border-color: #9f9fd7;
+    background: rgba(0, 0, 0, 0.8); 
+}
+
+.discount-card h3 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #9f9fd7;
+    font-weight: bold;
+}
+
+.discount-card p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Каталог игр */
+.game-catalogue {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.game-catalogue h1 {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.scrollable-content {
+    height: 700px;
+    overflow-y: auto;
+    padding: 20px;
+    border: 2px solid rgba(159, 159, 215, 0.3);
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background: #9f9fd7;
+}
+
+.scrollable-content h2 {
+    color: #9f9fd7;
+    font-size: 28px;
+    margin: 30px 0 20px 0;
+}
+
+.games-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.game-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 220px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(159, 159, 215, 0.2);
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.game-card:hover {
+    border-color: #9f9fd7;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.game-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(159, 159, 215, 0.3);
+}
+
+.game-card h3 {
+    color: white;
+    font-size: 16px;
+    margin: 15px 10px 5px 10px;
+    font-weight: 500;
+}
+
+/* Подвал */
+footer {
+    background: rgba(18, 18, 43, 0.95);
+    padding: 50px 20px 30px;
+    margin-top: 80px;
+    border-top: 2px solid rgba(159, 159, 215, 0.3);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-title {
+    font-size: 20px;
+    color: #9f9fd7;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #9f9fd7;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.phone-number {
+    font-size: 22px;
+    font-weight: bold;
+    color: #9f9fd7;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: #9f9fd7; /* Убрал transform */
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #666;
+    font-size: 14px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hat {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    #navigation ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #navigation a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    
+    .banner {
+        height: 350px;
+    }
+    
+    .discount-card {
+        min-width: 100%;
+        max-width: 300px;
+    }
+    
+    .game-card {
+        min-width: 150px;
+        max-width: 180px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 250px;
+    }
+    
+    .discount-card {
+        padding: 20px;
+    }
+    
+    .discount-card h3 {
+        font-size: 36px;
+    }
+    
+    .game-card {
+        min-width: 130px;
+        max-width: 150px;
+    }
+    
+    .game-card img {
+        height: 100px;
+    }
+}

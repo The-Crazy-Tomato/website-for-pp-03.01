@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberX - Бронирование</title>
+<link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+
+    <div class="hat"> <!-- Шапка -->
+        <header>
+            <div class="logo">
+                <img src="image/CyberX.png" alt="CyberX Logo">
+            </div>
+            <nav id="navigation">
+                <ul>
+                    <li><a href="warp.html">Каталог игр</a></li>
+                    <li><a href="#" class="active">Бронирование</a></li>
+                    <li><a href="Showcase.html">Витрина</a></li>
+                    <li><a href="account.html">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <div class="reservation-container">
+            <h1 class="page-title">Бронирование</h1>
+
+            <!-- Типы клубов -->
+            <section class="club-types">
+                <div class="club-card">
+                    <h2>VIP Зал</h2>
+                    <p>Арены с VIP-зонами и кафе, баром. Для тех, кто ценит комфорт и премиальность.</p>
+                    <ul>
+                        <li>Мощные игровые ПК</li>
+                        <li>Комфортные кресла</li>
+                        <li>Отдельные переговорки</li>
+                        <li>Премиум напитки</li>
+                    </ul>
+                </div>
+
+                <div class="club-card">
+                    <h2>Обычный зал</h2>
+                    <p>Арены с мощным железом, готовой периферией и стабильным подключением.</p>
+                    <ul>
+                        <li>Игровые компьютеры</li>
+                        <li>Профессиональная периферия</li>
+                        <li>Высокоскоростной интернет</li>
+                        <li>Зона отдыха</li>
+                    </ul>
+                </div>
+
+                <div class="club-card">
+                    <h2>Плойка</h2>
+                    <p>Арены с уклоном в консольный гейминг. PlayStation 5, Xbox Series X зоны. Отличный вариант для консольных игр.</p>
+                    <ul>
+                        <li>PlayStation 5</li>
+                        <li>Xbox Series X</li>
+                        <li>Большие телевизоры</li>
+                        <li>Мультиплеерные игры</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Процесс бронирования -->
+            <section class="booking-section">
+                <h2>Забронировать место</h2>
+
+                <!-- Шаги -->
+                <div class="booking-steps">
+                    <div class="step active" id="step1">
+                        <div class="step-number">1</div>
+                        <h3>Выберите дату</h3>
+                        <p>Календарь бронирования</p>
+                    </div>
+                    <div class="step" id="step2">
+                        <div class="step-number">2</div>
+                        <h3>Выберите время</h3>
+                        <p>Доступные слоты</p>
+                    </div>
+                    <div class="step" id="step3">
+                        <div class="step-number">3</div>
+                        <h3>Выберите ПК</h3>
+                        <p>Номер компьютера</p>
+                    </div>
+                </div>
+
+                <!-- Календарь -->
+                <div class="calendar" id="calendarSection">
+                    <div class="month-header">
+                        <button id="prevMonth">‹</button>
+                        <h3 id="currentMonth">Декабрь 2024</h3>
+                        <button id="nextMonth">›</button>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid">
+                        <div class="day-header">ПН</div>
+                        <div class="day-header">ВТ</div>
+                        <div class="day-header">СР</div>
+                        <div class="day-header">ЧТ</div>
+                        <div class="day-header">ПТ</div>
+                        <div class="day-header">СБ</div>
+                        <div class="day-header">ВС</div>
+                    </div>
+                </div>
+
+                <!-- Выбор времени -->
+                <div class="time-selection" id="timeSection">
+                    <h3>Выберите время</h3>
+                    <div class="time-slots" id="timeSlots">
+                    </div>
+                </div>
+
+                <!-- Выбор ПК -->
+                <div class="pc-selection" id="pcSection">
+                    <h3>Выберите номер ПК</h3>
+                    <div class="pc-grid" id="pcGrid">
+                    </div>
+                </div>
+
+                <!-- Подтверждение брони -->
+                <div class="confirmation-section" id="confirmationSection">
+                    <h3>Подтверждение бронирования</h3>
+                    
+                    <div class="booking-summary">
+                        <div class="summary-item">
+                            <h4>Дата</h4>
+                            <p id="summaryDate">ПТ 5</p>
+                        </div>
+                        <div class="summary-item">
+                            <h4>Время</h4>
+                            <p id="summaryTime">10:10</p>
+                        </div>
+                        <div class="summary-item">
+                            <h4>Номер ПК</h4>
+                            <p id="summaryPC">5</p>
+                        </div>
+                    </div>
+
+                    <div class="warning">
+                        ⚠️ Внимание: деньги, отданные за бронирование компьютера, нельзя вернуть, но часы игры, которые остались, остаются на вашем счету.
+                    </div>
+
+                    <button class="confirm-button" id="confirmBooking">ЗАВЕРШИТЬ БРОНИРОВАНИЕ</button>
+                </div>
+            </section>
+
+            <!-- Найди клубы по близости -->
+            <section class="find-clubs">
+                <h3>Найди клубы по близости</h3>
+                <button class="location-button" onclick="findNearbyClubs()">
+                    🔍 Найти ближайший клуб
+                </button>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="image/CyberX.png" alt="CyberX Logo">
+                    <div style="font-size: 24px; font-weight: bold; color: #9f9fd7;">CyberX</div>
+                </div>
+                <p style="color: #aaa; line-height: 1.6; margin-bottom: 20px;">
+                    Лучший игровой портал с каталогом игр, бронированием и витриной предметов.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">VK</a>
+                    <a href="#" class="social-icon">TG</a>
+                    <a href="#" class="social-icon">YT</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Навигация</h3>
+                <ul class="footer-links">
+                    <li><a href="warp.html">Каталог игр</a></li>
+                    <li><a href="#">Бронирование</a></li>
+                    <li><a href="Showcase.html">Витрина</a></li>
+                    <li><a href="account.html">Личный кабинет</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Контакты</h3>
+                <div class="contact-info">
+                    <div class="phone-number">
+                        +7 (000) 000-00-00
+                    </div>
+                    <div style="color: #aaa; margin-top: 10px;">
+                        где нас можно найти:
+                    </div>
+                    <div style="color: #666; margin-top: 5px; font-size: 14px;">
+                        г. Москва, ул. Примерная, д. 1
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2024 CyberX. Все права защищены.
+        </div>
+    </footer>
+
+    <script src="reservation.js"></script>
+
+    
+</body>
+</html>

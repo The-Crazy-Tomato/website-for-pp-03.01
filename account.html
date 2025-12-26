@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberX - Личный кабинет</title>
+    <link rel="stylesheet" href="account.css">
+
+</head>
+<body>
+
+    <div class="hat"> <!-- Шапка -->
+        <header>
+            <div class="logo">
+                <img src="image/CyberX.png" alt="CyberX Logo">
+            </div>
+            <nav id="navigation">
+                <ul>
+                    <li><a href="warp.html">Каталог игр</a></li>
+                    <li><a href="reservation.html">Бронирование</a></li>
+                    <li><a href="Showcase.html">Витрина</a></li>
+                    <li><a href="#" class="active">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <div class="account-container">
+            <h1 class="page-title">Личный кабинет</h1>
+
+            <!-- Профиль пользователя -->
+            <div class="profile-section">
+                <!-- Левая колонка - аватар и контакты -->
+                <div class="profile-card">
+                    <div class="avatar" id="userAvatar">L</div>
+                    <h2 class="user-name" id="userName">Lily</h2>
+                    <div class="user-phone">
+                        📱 <span id="userPhone">+7 (999) 999-99-99</span>
+                    </div>
+                    
+                    <button class="edit-profile-btn" onclick="editProfile()">
+                        ✏️ Редактировать профиль
+                    </button>
+                </div>
+
+                <!-- Правая колонка - информация о счете -->
+                <div class="info-card">
+                    <!-- Часы на счету -->
+                    <div class="info-section">
+                        <h3 class="info-title">⏰ Часы на счету</h3>
+                        <div class="balance-display">
+                            <div class="balance-label">Доступно для игры:</div>
+                            <div class="balance-value" id="balanceValue">1 час 32 мин.</div>
+                        </div>
+                        
+                        <h4 style="color: #ccc; margin: 15px 0 10px 0;">Пополнить баланс:</h4>
+                        <div class="topup-buttons">
+                            <button class="topup-btn" onclick="addHours(1)">+1 час</button>
+                            <button class="topup-btn" onclick="addHours(2)">+2 часа</button>
+                            <button class="topup-btn" onclick="addHours(5)">+5 часов</button>
+                            <button class="topup-btn" onclick="addHours(10)">+10 часов</button>
+                        </div>
+                        <div class="custom-amount">
+                            <input type="number" id="customHours" placeholder="Другое количество часов">
+                            <button onclick="addCustomHours()">Добавить</button>
+                        </div>
+                    </div>
+
+                    <!-- Бронирования -->
+                    <div class="info-section">
+                        <h3 class="info-title">📅 Активные бронирования</h3>
+                        <div class="booking-status">
+                            <div class="status-label">Текущий статус:</div>
+                            <div class="status-value" id="bookingStatus">отсутствует</div>
+                            
+                            <div class="booking-details" id="activeBooking">
+                                <div class="booking-info">
+                                    <div class="booking-item">
+                                        <div class="booking-item-label">Дата</div>
+                                        <div class="booking-item-value" id="bookingDate">ПТ 5</div>
+                                    </div>
+                                    <div class="booking-item">
+                                        <div class="booking-item-label">Время</div>
+                                        <div class="booking-item-value" id="bookingTime">19:00</div>
+                                    </div>
+                                    <div class="booking-item">
+                                        <div class="booking-item-label">Номер ПК</div>
+                                        <div class="booking-item-value" id="bookingPC">12</div>
+                                    </div>
+                                </div>
+                                <div class="booking-actions">
+                                    <button class="booking-action-btn primary" onclick="extendBooking()">Продлить</button>
+                                    <button class="booking-action-btn secondary" onclick="cancelBooking()">Отменить</button>
+                                </div>
+                            </div>
+                            
+                            <button class="booking-action-btn primary" onclick="makeNewBooking()" style="margin-top: 15px; width: 100%;">
+                                🎮 Создать новое бронирование
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- История операций -->
+            <div class="history-section">
+                <h2 class="info-title">📋 История операций</h2>
+                
+                <div class="history-filters">
+                    <button class="history-filter active" onclick="showAllHistory()">Все</button>
+                    <button class="history-filter" onclick="showTopupHistory()">Пополнения</button>
+                    <button class="history-filter" onclick="showBookingHistory()">Бронирования</button>
+                </div>
+                
+                <div class="history-list" id="historyList">
+                </div>
+            </div>
+
+            <!-- Уведомления -->
+            <div class="notifications-section">
+                <h2 class="info-title">🔔 Уведомления</h2>
+                
+                <div class="notification-item">
+                    <div class="notification-header">
+                        <div class="notification-title">Добро пожаловать в CyberX!</div>
+                        <div class="notification-time">5 дек 2024</div>
+                    </div>
+                    <div class="notification-text">
+                        Ваш аккаунт успешно активирован. Приятной игры!
+                    </div>
+                </div>
+                
+                <div class="notification-item">
+                    <div class="notification-header">
+                        <div class="notification-title">Бонусные часы</div>
+                        <div class="notification-time">Сегодня, 10:30</div>
+                    </div>
+                    <div class="notification-text">
+                        Вам начислен бонус 30 минут за активную игру вчера вечером!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="image/CyberX.png" alt="CyberX Logo">
+                    <div style="font-size: 20px; font-weight: bold; color: #9f9fd7;">CyberX</div>
+                </div>
+                <p style="color: #aaa; margin-bottom: 15px;">
+                    Лучший игровой портал с каталогом игр, бронированием и витриной предметов.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">VK</a>
+                    <a href="#" class="social-icon">TG</a>
+                    <a href="#" class="social-icon">YT</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Навигация</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Каталог игр</a></li>
+                    <li><a href="reservation.html">Бронирование</a></li>
+                    <li><a href="#">Витрина</a></li>
+                    <li><a href="account.html">Личный кабинет</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Контакты</h3>
+                <div class="contact-info">
+                    <div class="phone-number">
+                        +7 (000) 000-00-00
+                    </div>
+                    <div style="color: #aaa; margin-top: 10px;">
+                        где нас можно найти:
+                    </div>
+                    <div style="color: #666; margin-top: 5px; font-size: 14px;">
+                        г. Москва, ул. Примерная, д. 1
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2024 CyberX. Все права защищены.
+        </div>
+    </footer>
+
+    <script src="account.js"></script>
+
+</body>
+</html>
